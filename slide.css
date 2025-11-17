@@ -1,0 +1,414 @@
+/* ============================================== */
+/* ESTILOS GLOBAIS E TEMA                 */
+/* ============================================== */
+
+/* 1. Importar Fontes do Google */
+/* Fonte dos Títulos: Montserrat */
+/* Fonte dos Textos: Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700;900&display=swap');
+
+/* 2. Definir Paleta de Cores (CSS Variables) */
+:root {
+  --cor-verde-principal: #2d5b3d;  /* Um verde-floresta, inspirado no 🌿 */
+  --cor-verde-claro: #4a7c59;
+  --cor-acento-ouro: #f3f8f3;    /* Um ouro velho / bege para botões e destaques */
+  --cor-texto-escuro: #333333;
+  --cor-texto-claro: #fdf9f9;
+  --cor-fundo: #ffffff;
+}
+
+/* 3. Estilos Base do Corpo */
+* {
+  box-sizing: border-box; /* Garante que padding não afeta a largura total */
+}
+
+/* PRIMEIRO: Garanta que esta regra para o <body> existe no seu style.css.
+  É ela que define 'Lato' como a fonte principal de TEXTO.
+*/
+body {
+  font-family: 'Lato', sans-serif; 
+  /* ...outros estilos do seu body... */
+}
+
+
+/* SEGUNDO: O seu código corrigido.
+  Agora, 'Montserrat' é usado para *substituir* o 'Lato' 
+  apenas nestes elementos.
+*/
+.logo {
+  font-family: 'Montserrat', ; /* <-- MUDADO */
+  font-weight: 900;
+  font-size: 1.5rem; /* 24px */
+  color: var(--cor-verde-principal);
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar nav a {
+  font-family: 'Montserrat', ; /* <-- MUDADO */
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cor-texto-escuro);
+  margin-left: 1.5rem; /* 24px */
+  padding-bottom: 6px; 
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o rato e no link ativo */
+.navbar nav a:hover {
+  color: var(--cor-verde-principal);
+  border-bottom: 3px solid var(--cor-verde-principal);
+}
+
+.navbar nav a.active {
+  color: var(--cor-verde-principal);
+  border-bottom: 3px solid var(--cor-verde-principal);
+}
+
+/* ============================================== */
+/* SECÇÃO "HERO"                    */
+/* ============================================== */
+
+.hero {
+  position: relative;
+  
+  /* ================================================= */
+  /* IMPORTANTE: COLE A SUA IMAGEM DE FUNDO AQUI   */
+  /* Descomente a linha abaixo e cole o seu código   */
+  /* ================================================= */
+  
+   background-image: url('https://media.istockphoto.com/id/1333381000/pt/foto/view-at-the-viseu-city-with-cathedral-of-viseu-on-top-se-cathedral-de-viseu-architectural.jpg?s=612x612&w=0&k=20&c=TC9u6oRFfiK2mIrXcGXooHL5vxT34xMTQdPD36dYaAg='); */
+  
+  
+  background-color: #631717; /* Cor de fallback caso a imagem falhe */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Define a altura e alinhamento */
+  min-height: calc(100vh - 70px); /* Altura total do ecrã, menos o navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* O overlay escuro para dar contraste ao texto */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(224, 231, 223, 0); /* Overlay 50% escuro */
+  z-index: 1;
+}
+
+/* O conteúdo (texto e carrossel) */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Fica por cima do overlay */
+  
+  /* ================================================= */
+  /* AQUI ESTÁ O LAYOUT LADO A LADO    */
+  /* ================================================= */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem; /* Espaço entre texto e carrossel */
+  
+  /* Limita a largura máxima */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centra o conteúdo */
+}
+
+/* Bloco de Texto */
+.hero-content .text {
+  flex-basis: 50%; /* Ocupa 50% da largura */
+  color: var(--cor-texto-claro);
+}
+
+.hero-content .text h1 {
+  font-family: 'Montserrat', sans-serif; /* <-- FONTE MUDADA */
+  font-weight: 900;
+  font-size: 3.5rem; /* 56px */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-content .text h1 span {
+  color: var(--cor-acento-ouro); /* Cor de destaque para "Viseu" */
+}
+
+.hero-content .text p {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 2rem;
+  max-width: 500px; /* Limita largura do parágrafo */
+}
+
+/* Botão "Descubra mais" */
+.btn {
+  display: inline-block;
+  background-color: var(--cor-acento-ouro);
+  color: var(--cor-texto-escuro); /* Texto escuro no botão claro */
+  padding: 0.75rem 1.75rem; /* 12px 28px */
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif; /* <-- FONTE MUDADA */
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #201305; /* Tom mais claro ao passar o rato */
+  transform: translateY(-3px); /* Efeito de "levantar" */
+  box-shadow: 0 4px 10px rgba(8, 58, 20, 0.2);
+}
+
+/* ============================================== */
+/* CARROSSEL                      */
+/* ============================================== */
+
+/* ============================================== */
+/* CARROSSEL (CÓDIGO CORRIGIDO)          */
+/* ============================================== */
+
+/* CÓDIGO CORRIGIDO */
+.carousel {
+  flex-basis: 45%; 
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden; 
+  
+  /* 👇 ADICIONE ESTA LINHA 👇 */
+  max-height: 450px; /* Pode escolher o valor que quiser! */
+}
+
+.carousel-track {
+  display: flex;
+  
+  /* 2. A SUAVIDADE: Adiciona o "movimento bonito e leve" */
+  /* Qualquer mudança na 'transform' (movimento) demorará 0.5s */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* CÓDIGO CORRIGIDO */
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0; 
+  display: block; 
+  
+  /* 👇 ADICIONE ESTAS DUAS LINHAS 👇 */
+  height: 450px; /* Use o MESMO valor do max-height acima */
+  object-fit: cover; /* Impede a imagem de distorcer */
+}
+
+/* ============================================== */
+/* RESPONSIVO (TELEMÓVEL)          */
+/* ============================================== */
+
+@media (max-width: 900px) {
+  .hero-content {
+    /* Em ecrãs médios, empilha o conteúdo */
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-content .text {
+    flex-basis: 100%;
+  }
+  .hero-content .carousel {
+    flex-basis: 100%;
+    max-width: 500px; /* Limita o tamanho do carrossel no telemóvel */
+  }
+  .hero-content .text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 110px; /* Mais espaço para o navbar que se pode quebrar */
+  }
+  .navbar {
+    flex-direction: column; /* Empilha logo e links */
+    padding: 0.5rem 1rem;
+  }
+  .navbar nav a {
+    margin: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-content .text h1 {
+    font-size: 2.5rem; /* Título mais pequeno */
+  }
+  .sua-classe-de-card {
+  max-height: 400px;  /* Define uma altura MÁXIMA (ex: 400 pixels) */
+  overflow-y: auto;   /* Adiciona scroll vertical SE o texto passar do limite */
+}
+/* ============================================== */
+/* CSS PARA O BLOCO DE CITAÇÃO (NOVO)     */
+/* ============================================== */
+
+.bloco-citacao {
+  text-align: center; /* 👈 A MAGIA: Centra tudo */
+  margin-top: 60px;   /* Adiciona um bom espaço depois das colunas */
+  padding: 0 20px;    /* Evita que o texto cole nas bordas em telemóveis */
+}
+
+.bloco-citacao blockquote {
+  /* Tira as margens feias do navegador */
+  margin: 0;
+  
+  /* Usa a fonte bonita que já importámos! */
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem; /* Tamanho grande para a citação */
+  font-style: italic;  /* 👈 O estilo de citação */
+  color: #023308;      /* A sua cor verde escura principal */
+  
+  /* Limita a largura da citação para ficar mais fácil de ler */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bloco-citacao blockquote p {
+  margin-bottom: 1rem; /* Espaço entre a citação e o autor */
+}
+
+/* O autor (a tag <cite>) */
+.bloco-citacao cite {
+  font-family: 'Lato', sans-serif; /* Fonte normal para o autor */
+  font-style: normal; /* Tira o itálico do autor */
+  font-size: 1rem;
+  color: #555;
+  display: block; /* Põe o autor numa linha separada */
+}
+/* ============================================== */
+/* ESTILO PARA O CARD DA PÁGINA INICIAL */
+/* ============================================== */
+
+/* Define o fundo cinzento e o espaço para o card */
+.main-homepage {
+  background-color: #f4f4f4; /* Fundo cinzento claro */
+  padding: 60px 20px;
+  max-width: 900px; 
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Define a caixa branca com sombra */
+.main-homepage .data-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+/* Define o título verde com a linha amarela */
+.main-homepage .data-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #023308; /* Verde escuro */
+  border-bottom: 2px solid #ffc107; /* Amarelo */
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Define o texto do parágrafo */
+.main-homepage .data-card p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Define o estilo do rodapé (pode já ter isto) */
+footer#creditos {
+    background-color: #222; 
+    color: #ddd; 
+    padding: 30px 20px; 
+    text-align: center; 
+    font-size: 0.9em;
+    /* Adicione isto para "puxar" o rodapé para cima */
+    margin-top: -80px; 
+    position: relative;
+    z-index: 10;
+}
+/* ============================================== */
+/* ESTILO PARA O CARD DA PÁGINA INICIAL (NOVO) */
+/* ============================================== */
+
+/* Isto dá espaço ao card */
+.main-homepage {
+  padding: 60px 20px;
+  max-width: 900px; /* Um pouco mais estreito para a pág. inicial */
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Este é o estilo do card (caixa branca com sombra) */
+.data-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+/* Título verde (igual ao das outras páginas) */
+.data-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #023308; /* O seu verde escuro */
+  border-bottom: 2px solid #ffc107; /* O seu amarelo */
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+/* Texto do parágrafo (igual ao das outras páginas) */
+.data-card p {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+
+}
+/* --- Estilo do Card para o Texto no Hero --- */
+
+.hero .text {
+  /* Fundo e Efeito de Vidro (Glassmorphism) */
+  background-color: rgba(0, 0, 0, 0.4); /* Cor de fundo escura e semi-transparente */
+  backdrop-filter: blur(8px);           /* Desfoca o que está atrás do card */
+  -webkit-backdrop-filter: blur(8px); /* Compatibilidade para Safari */
+
+  /* Formato do Card */
+  padding: 30px;                       /* Espaçamento interno para o texto "respirar" */
+  border-radius: 12px;                  /* Cantos arredondados */
+  
+  /* Sombra e Borda */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil para definir o card */
+}
+.hero .text {
+  /* ... (todos os outros estilos do card que te passei) ... */
+  
+  /* ADICIONE ESTA LINHA ABAIXO */
+  font-family: Georgia, 'Times New Roman', serif;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+}

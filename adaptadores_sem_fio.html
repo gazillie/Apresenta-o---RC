@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 🌎 Estilo geral */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ---------------------------------------------------- */
+        /* CABEÇALHO */
+        /* ---------------------------------------------------- */
+        header {
+            background-color: #023308;
+            color: white;
+            padding: 60px 20px 0; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em; /* Tamanho ajustado para sub-páginas */
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: #011f04;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+            border-bottom: 2px solid #ffc107;
+        }
+        
+        /* ---------------------------------------------------- */
+        /* MAIN e CONTEÚDO ESPECÍFICO DESTA PÁGINA */
+        /* ---------------------------------------------------- */
+        main {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .data-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Adicionei esta margem para o primeiro card também ter espaço */
+            margin-bottom: 40px; 
+        }
+        
+        .data-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #023308;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        /* ---------------------------------------------------- */
+        /* RODAPÉ */
+        /* ---------------------------------------------------- */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 30px 20px;
+            margin-top: 80px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        /* Media Query Básico */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            nav ul li { margin: 0 10px; }
+            .data-grid { grid-template-columns: 1fr; }
+        }
+
+    </style>
+</head>
+<body> <header>
+        <h1>Localização Geográfica</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="dados.html" style="color: #ffc107; border-bottom: 2px solid #ffc107;">DADOS</a></li> 
+                <li><a href="paisagens.html">PAISAGENS</a></li>
+                <li><a href="cultura.html">CULTURA</a></li>
+                <li><a href="DESCUBRA_MAIS.html">DESCUBRA MAIS</a></li>
+                <li><a href="creditos.html">CRÉDITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+ 
+        <div class="data-card">
+          
+            <h2>Localização Geográfica</h2> 
+          
+            <p>
+                O concelho de Viseu situa-se no centro-norte de Portugal, integrando o Distrito de Viseu, na Região Centro e na Sub-Região Viseu Dão Lafões.
+            </p>
+            <p>
+                Limita a norte com os concelhos de São Pedro do Sul e Castro Daire, a leste com Vila Nova de Paiva, Mangualde e Nelas, a sul com Tondela e a oeste com Vouzela.
+            </p>
+            <p>
+                A cidade de Viseu está localizada a cerca de 300 metros de altitude, sendo conhecida como a “Cidade Jardim” devido à sua qualidade ambiental e aos amplos espaços verdes.
+            </p>
+            
+            <img src="https://media.istockphoto.com/id/1193656494/pt/vetorial/viseu-red-highlighted-in-map-of-portugal.jpg?s=612x612&w=0&k=20&c=iUVQqEZGQ07RrTVJtceifjf0jsX6Kb8iqd7b5SU9h6Q=" alt="Mapa de Portugal destacando viseu" style="width: 100%; max-width: 500px; margin-top: 20px; border-radius: 8px;">
+        
+        </div> <div class="data-grid">
+            
+            <div class="data-card">
+                <h2>Freguesias</h2>
+                <p>O concelho de Viseu está atualmente dividido em 25 freguesias, que resultam da reorganização administrativa de 2013.</p>
+                
+                <p><strong>São elas:
+                </strong><br>
+                
+                
+
+<ul>
+  <li>Abraveses</li>
+  <li>Barreiros e Cepões</li>
+  <li>Bodiosa</li>
+  <li>Boa Aldeia, Farminhão e Torredeita</li>
+  <li>Calde</li>
+  <li>Campo</li>
+  <li>Cavernães</li>
+  <li>Cota</li>
+  <li>Coutos de Viseu</li>
+  <li>Fail e Vila Chã de Sá</li>
+  <li>Fragosela</li>
+  <li>Lordosa</li>
+  <li>Mundão</li>
+  <li>Orgens</li>
+  <li>Povolide</li>
+  <li>Ranhados</li>
+  <li>Repeses e São Salvador</li>
+  <li>Ribafeita</li>
+  <li>Rio de Loba</li>
+  <li>Santos Evos</li>
+  <li>São Cipriano e Vil de Souto</li>
+  <li>São João de Lourosa</li>
+  <li>São Pedro de France</li>
+  <li>Silgueiros</li>
+  <li>Viseu (Esta é a freguesia da cidade)</li>
+</ul>
+            </div> <div class="data-card">
+                <h2>Em termos de faixa etária, a população distribui-se da seguinte forma:</h2>
+                <p>Segundo os dados dos Censos 2021 (Instituto Nacional de Estatística), o concelho de Viseu tem cerca de 97 000 habitantes.</p>
+                <li>Homens: aproximadamente 46%
+
+</li>
+<li>Mulheres: aproximadamente 54%</li>
+                <ul>
+                    <p>m termos de faixa etária, a população distribui-se da seguinte forma:</p>
+                  <li>0–14 anos → 13%</li>
+                  <li>15–64 anos → 61%</li>
+                  <li>65 anos ou mais → 26%</li>
+                </ul>
+
+                <p>Estes números revelam um concelho com envelhecimento populacional, mas com uma boa qualidade de vida, atraindo cada vez mais residentes e visitantes.</p>
+
+                <img src="https://on.eapn.pt/wp-content/uploads/mapas_page-0018.jpg" alt="Gráfico da faixa etária" style="width: 100%; margin-top: 20px; border-radius: 8px;">
+            </div> </div> </main>
+
+    <footer id="creditos">
+        <p>&copy; 2025 Trabalho Escolar – Distrito de Viseu.</p>
+    </footer>
+
+</body>
+</html>

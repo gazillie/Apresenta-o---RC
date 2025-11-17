@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viseu-Turismo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ** RECOMENDAÇÃO: Crie um arquivo styles.css para que o estilo
+        ** seja o mesmo em todas as páginas sem precisar copiar este bloco!
+        */
+        
+        /* 🌎 Estilo geral */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ---------------------------------------------------- */
+        /* CABEÇALHO (Copiado do seu index.html) */
+        /* ---------------------------------------------------- */
+        header {
+            background-color: #023308;
+            color: white;
+            padding: 60px 20px 0; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em; /* Tamanho ajustado para sub-páginas */
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: #011f04;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+            border-bottom: 2px solid #ffc107;
+        }
+        
+        /* ---------------------------------------------------- */
+        /* MAIN e CONTEÚDO ESPECÍFICO DESTA PÁGINA */
+        /* ---------------------------------------------------- */
+        main {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .data-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .data-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #023308;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        /* ---------------------------------------------------- */
+        /* RODAPÉ (Copiado do seu index.html) */
+        /* ---------------------------------------------------- */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 30px 20px;
+            margin-top: 80px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        /* Media Query Básico */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            nav ul li { margin: 0 10px; }
+            .data-grid { grid-template-columns: 1fr; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DESCUBRA MAIS </h1>
+        
+        <nav>
+    <ul>
+        <li><a href="index.html">INÍCIO</a></li>
+        <li><a href="dados.html">DADOS</a></li> 
+        <li><a href="paisagens.html">PAISAGENS</a></li>
+        <li><a href="cultura.html">CULTURA</a></li>
+        <li><a href="DESCUBRA_MAIS.html" class="active">DESCUBRA MAIS</a></li>
+        <li><a href="creditos.html">CRÉDITOS</a></li>
+    </ul>
+</nav>
+    </header>
+
+   <section class="seccao-destaque" id="solar-prime">
+  <div class="destaque-overlay">
+    <div class="DESCUBRA MAIS – Vídeo e Síntese Final">
+      <h2>DESCUBRA MAIS – Vídeo e Síntese Final</h2>
+      <p>O distrito de Viseu é uma região que une natureza, cultura e modernidade.
+Esta secção convida o visitante a explorar visualmente tudo o que o trabalho apresentou — através de um vídeo promocional e de uma breve reflexão final.</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccao-destaque" id="se-viseu">
+  <div class="destaque-overlay">
+    <div class="destaque-conteudo">
+      <h2>Vídeo Promocional</h2>
+      <p>Abaixo está um vídeo que mostra a beleza e a essência de Viseu — as suas paisagens, monumentos, tradições e o espírito acolhedor das suas gentes.</p>
+    </div>
+  </div>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/CvkESl_2JSc?si=3IfBJSxh7F1oXUpa" title="YouTube video player"referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ 
+  <p>Esse é um video retirado do youtube, do canal <a href="https://www.youtube.com/@VitorMiraSoares">Mira Portugal.</a> Também nesse canal tem uma playlist com mais de 40 videos mostrando a bela cidade de Viceu, fica a recomendação!</p>
+
+</section>
+
+
+  </div>
+</section>
+<br>
+<br>
+       
+           
+            <div class="data-card">
+                <h2>Síntese Final</h2>
+                <p>O distrito de Viseu destaca-se pela sua identidade própria, construída ao longo de séculos de história e tradição.
+A harmonia entre o património natural, o legado cultural e o espírito inovador das suas gentes faz desta região um símbolo de equilíbrio e qualidade de vida.<br>
+
+As paisagens do Dão, os monumentos da cidade e as tradições populares demonstram a importância de Viseu na formação da identidade regional e nacional de Portugal.<br>
+<br>
+<em>Em Viseu, o passado e o presente convivem lado a lado — tornando esta terra um verdadeiro coração de Portugal.</em></p><br>
+            </div>
+            
+          
+        </div>
+        
+    </main>
+
+    <footer id="creditos">
+        <p>&copy;© 2025 Trabalho Escolar – Distrito de Viseu.</p>
+      
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisagens</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 🌎 Estilo geral */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ---------------------------------------------------- */
+        /* CABEÇALHO */
+        /* ---------------------------------------------------- */
+        header {
+            background-color: #023308;
+            color: white;
+            padding: 60px 20px 0; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        /* Navegação */
+        nav {
+            background-color: #011f04;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 10px;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffc107;
+            border-bottom: 2px solid #ffc107;
+        }
+        
+        /* ---------------------------------------------------- */
+        /* MAIN e CONTEÚDO ESPECÍFICO DESTA PÁGINA */
+        /* ---------------------------------------------------- */
+        main {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .data-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px; /* Adicionado para espaçamento */
+        }
+        
+        .data-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #023308;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        
+        /* CSS DAS IMAGENS DENTRO DOS CARDS */
+        .data-card img {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        /* ---------------------------------------------------- */
+        /* CSS PARA O BLOCO DE CITAÇÃO (COPIADO DA OUTRA PÁG.) */
+        /* ---------------------------------------------------- */
+        .bloco-citacao {
+          text-align: center; 
+          margin-top: 20px; /* Margem ajustada */
+          padding: 0 20px;    
+        }
+
+        .bloco-citacao blockquote {
+          margin: 0;
+          font-family: 'Playfair Display', serif;
+          font-size: 1.9rem; 
+          font-style: italic;  
+          color: #023308;      
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .bloco-citacao blockquote p {
+          margin-bottom: 1rem; 
+        }
+
+        .bloco-citacao cite {
+          font-family: 'Lato', sans-serif; 
+          font-style: normal; 
+          font-size: 1rem;
+          color: #555;
+          display: block; 
+        }
+
+        /* ---------------------------------------------------- */
+        /* RODAPÉ */
+        /* ---------------------------------------------------- */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 30px 20px;
+            margin-top: 80px;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        /* Media Query Básico */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            nav ul { flex-direction: column; gap: 10px; } /* Empilha o menu */
+            nav ul li { margin: 0 10px; }
+            .data-grid { grid-template-columns: 1fr; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PAISAGENS – Património Natural</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="dados.html">DADOS</a></li> 
+                <li><a href="paisagens.html" style="color: #ffc107; border-bottom: 2px solid #ffc107;">PAISAGENS</a></li>
+                <li><a href="cultura.html">CULTURA</a></li>
+                <li><a href="DESCUBRA_MAIS.html">DESCUBRA MAIS</a></li>
+                <li><a href="creditos.html">CRÉDITOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="data-card">
+            <h2>Património Natural</h2>
+            <p>
+                O concelho e o distrito de Viseu destacam-se pela sua grande diversidade natural, com paisagens que combinam montanhas, rios, florestas e vales férteis.
+            </p>
+            <p>
+                Estes elementos fazem de Viseu uma região rica em <strong>biodiversidade</strong>, recursos naturais e zonas de lazer ao ar livre.
+            </p>
+        </div>
+
+        <div class="data-grid">
+
+            <div class="data-card">
+                <h2>Rio Dão</h2>
+                <p>Um dos principais rios da região, o Rio Dão nasce na Serra da Nave e atravessa o distrito, dando nome à famosa Região Demarcada dos Vinhos do Dão. As suas margens são cercadas por vinhedos e áreas verdes.</p>
+                <img src="data:image/jpeg;base64,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" alt="Rio Dão">
+            </div>
+
+            <div class="data-card">
+                <h2>Serra do Caramulo</h2>
+                <p>Localizada parcialmente no distrito de Viseu, a Serra do Caramulo ultrapassa os 1000 metros. É conhecida pelas suas paisagens rochosas, florestas e vistas panorâmicas sobre o vale do Dão.</p>
+                <img src="data:image/jpeg;base64,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" alt="Serra do Caramulo">
+            </div>
+
+            <div class="data-card">
+                <h2>Parque do Fontelo</h2>
+                <p>Situado no centro da cidade, é um dos espaços verdes mais emblemáticos de Viseu. Com árvores centenárias, trilhos e jardins, é considerado o “pulmão verde” da cidade.</p>
+                <img src="https://fotogaleriaporviseu.blogs.sapo.pt/arquivo/Fontelo100-thumb.JPG" alt="Parque Fontelo">
+            </div>
+
+            <div class="data-card">
+                <h2>Mata do Senhor dos Aflitos</h2>
+                <p>Uma extensa área natural próxima da cidade, com grande variedade de espécies vegetais e animais. É uma das zonas mais tranquilas para caminhadas e observação da natureza.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWb3mkMbKAHUhB4qv8lP_BO9uk0TsUxwvPJA&s" alt="Mata do Senhor dos Aflitos">
+            </div>
+
+            <div class="data-card">
+                <h2>Flora Típica</h2>
+                <p>A flora da região é marcada por castanheiros, carvalhos, pinheiros e giestas. Estas espécies cobrem grande parte das serras e vales, contribuindo para a beleza paisagística, E esse é um arbusto selvagem muito, comum em Portugal e é extremamente típico da região de Viseu e de todo o interior do país.
+
+A<strong>giesta </strong>é famosa por cobrir os montes, serras e bermas das estradas com esse tom de amarelo muito vivo, especialmente durante a Primavera.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQ43YY8OdSZq4beQcxZfCoB7dh_JmrJFebQ&s" alt="Flora Típica">
+            </div>
+
+            <div class="data-card">
+                <h2>Fauna Típica</h2>
+                <p>A fauna inclui espécies como javalis, raposas, coelhos-bravos, corujas e águias. Nas zonas montanhosas é comum observar aves de rapina e pequenos mamíferos, E esse é o <strong> ouriço-cacheiro </strong> (Erinaceus europaeus) é uma das espécies da fauna de Viseu e de Portugal, sendo um mamífero insetívoro com corpo coberto de espinhos.</p>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicF_ak153CZRsAAdbTdSdWloD6mHPVzZNhPEHyLMKBhYNVMtlzrMvbi9DCF120D1QqBvNKGzdE800TVjDHib4RucLS0ZDamgjHWKGmwpnslS4Ra1jAKQwufgOTPo3Jnrh6nouLzkUTLJk/s320/IMG_9423.jpg" alt="Fauna Típica">
+            </div>
+
+        </div> <div class="bloco-citacao">
+            <blockquote>
+              <p>“O património natural de Viseu reflete a harmonia entre a serra, o rio e o verde...”</p>
+             
+            </blockquote>
+        </div>
+
+    </main>
+
+    <footer id="creditos">
+        <p>&copy; 2025 Trabalho Escolar – Distrito de Viseu.</p>
+    </footer>
+
+</body>
+</html>
